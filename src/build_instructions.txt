@@ -1,0 +1,31 @@
+Build Instructions for BoxNow Label Fetcher
+==========================================
+
+To rebuild the application:
+
+1. Install PyInstaller:
+   pip install pyinstaller
+
+2. Make sure you have the BoxNow.png file in the same directory as the .py files
+
+3. Run PyInstaller with the spec file:
+   pyinstaller BoxNowAllLabelsV8.spec
+
+   OR
+
+   python -m PyInstaller BoxNowAllLabelsV8.spec
+
+4. The executable will be created in the dist/ folder
+
+Files included in src/:
+- BoxNowAllLabelsV8.py - Updated version with fixed pagination (no count parameter)
+- BoxNowAllLabelsV6.py - Original version (for reference)
+- BoxNowAllLabelsV8.spec - PyInstaller configuration file
+- build_instructions.txt - This file
+
+Notes:
+- The updated version (V8) removes dependency on the 'count' parameter
+- Uses simple page-based pagination that works with the current API
+- All UI text is in Bulgarian
+- Login fields are hidden after successful authentication
+- Only supports A4 and A6 label formats
